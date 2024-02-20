@@ -9,8 +9,11 @@ IFS='.' read -ra STRR2 <<< "$STR2"
 
 CURRENT_VER=$(echo "${STRR1[1]}" | sed "s/\_/\./g" )
 INSTALLED_VER="${STRR2[0]}.${STRR2[1]}"
+echo "*************************" 
 echo "CURRENT_VER : $CURRENT_VER"
 echo "INSTALLED_VER : $INSTALLED_VER"
+echo "*************************" 
+
 # CURRENT_VER=1.95
 if [[ $CURRENT_VER > $INSTALLED_VER ]]; then
     echo "*************************" 
@@ -24,6 +27,6 @@ if [[ $CURRENT_VER > $INSTALLED_VER ]]; then
     
     sudo dpkg -i deb/code_$CURRENT_VER.deb
 else
-    echo "same version" 
+    echo -e "\n>> You already installed latest version..\n" 
 fi
 
