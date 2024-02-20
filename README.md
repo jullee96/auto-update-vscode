@@ -19,3 +19,8 @@ vi ~/.zshrc
 ## add alias
 alias update-vscode="bash ~/{project-repo-loc}/auto-update-vscode/update.sh"
 ```
+
+```sh {"id":"01HQ22K17TH8PWNP9VDW44CFXD"}
+# source ~/.bashrc or what you using shell lang 
+source ~/.zshrc
+```
